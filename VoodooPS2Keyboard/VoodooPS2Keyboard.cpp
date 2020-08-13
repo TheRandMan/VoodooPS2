@@ -845,7 +845,7 @@ void ApplePS2Keyboard::setParamPropertiesGated(OSDictionary * dict)
     xml = OSDynamicCast(OSBoolean, dict->getObject(kUseISOLayoutKeyboard));
     if (xml) {
         if (xml->isTrue()) {
-            _PS2ToADBMap[0x29]  = _PS2ToADBMapMapped[0x56];     //Europe2 '¤º'
+            _PS2ToADBMap[0x29]  = _PS2ToADBMapMapped[0x56];     //Europe2 'Â¤Âº'
             _PS2ToADBMap[0x56]  = _PS2ToADBMapMapped[0x29];     //Grave '~'
         }
         else {
@@ -1431,7 +1431,7 @@ void ApplePS2Keyboard::modifyKeyboardBacklight(int keyCode, bool goingDown)
         ++index;
     }
     // move to next or previous
-    index += (keyCode == 0x4e ? +1 : -1);
+    index += (keyCode == 0x34 ? +1 : -1);
     if (index >= _backlightCount)
         index = _backlightCount - 1;
     if (index < 0)
@@ -1571,11 +1571,11 @@ bool ApplePS2Keyboard::dispatchKeyboardEventWithPacket(const UInt8* packet)
     // handle special cases
     switch (keyCode)
     {
-        case 0x4e:  // Numpad+
-        case 0x4a:  // Numpad-
+        case 0x34:  // "comma" key
+        case 0x33:  // "period" key
             if (_backlightLevels && checkModifierState(kMaskLeftControl|kMaskLeftAlt))
             {
-                // Ctrl+Alt+Numpad(+/-) => use to manipulate keyboard backlight
+                // Ctrl+Alt+"comma" and "period" keys => use to manipulate keyboard backlight
                 modifyKeyboardBacklight(keyCode, goingDown);
                 keyCode = 0;
             }
@@ -1589,7 +1589,7 @@ bool ApplePS2Keyboard::dispatchKeyboardEventWithPacket(const UInt8* packet)
                 for (int i = start; i < countof(keys); i++)
                     if (KBV_IS_KEYDOWN(keys[i]))
                         dispatchKeyboardEventX(_PS2ToADBMap[keys[i]], false, now_abs);
-                dispatchKeyboardEventX(keyCode == 0x4e ? 0x90 : 0x91, goingDown, now_abs);
+                dispatchKeyboardEventX(keyCode == 0x34 ? 0x90 : 0x91, goingDown, now_abs);
                 for (int i = start; i < countof(keys); i++)
                     if (KBV_IS_KEYDOWN(keys[i]))
                         dispatchKeyboardEventX(_PS2ToADBMap[keys[i]], true, now_abs);
