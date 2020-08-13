@@ -379,9 +379,9 @@ bool ApplePS2Keyboard::start(IOService * provider)
         return false;
     }
     
-    // get IOACPIPlatformDevice for Device (PS2K)
+    // get IOACPIPlatformDevice for Device (KBBL)
     //REVIEW: should really look at the parent chain for IOACPIPlatformDevice instead.
-    _provider = (IOACPIPlatformDevice*)IORegistryEntry::fromPath("IOService:/AppleACPIPlatformExpert/PS2K");
+    _provider = (IOACPIPlatformDevice*)IORegistryEntry::fromPath("IOService:/AppleACPIPlatformExpert/KBBL");
 
     //
     // get brightness levels for ACPI based brightness keys
