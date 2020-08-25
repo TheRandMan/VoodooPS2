@@ -1,8 +1,29 @@
 VoodooPS2
 =========
 
-[![Build Status](https://travis-ci.com/acidanthera/VoodooPS2.svg?branch=master)](https://travis-ci.com/acidanthera/VoodooPS2)
+**NOTE:** This is a modified version of VoodooPS2Controller that maps the top row key of a Chromebook to the following:
 
+
+| On Keyboard          | Mapped to      |
+|----------------------|----------------|
+| Back arrow key       | Previous track |
+| Forward arrow key    | Next track     |
+| Refresh key          | Play/Pause     |
+| Full screen key      | F4             |
+| Show open windows key| F5             |
+| Brightness down key  | Brightness down|
+| Brightness up key    | Brightness up  |
+| Mute key             | Mute           |
+| Volume down key      | Volume down    |
+| Volume up key        | Volume up      |
+
+- F4 Can be mapped to Full Screen in System Preferences > Keyboard > Shortcuts > App Shortcuts
+- F5 Can be mapped to  in System Preferences > Keyboard > Shortcuts > App Shortcuts
+
+Keyboard backlight brightness control is controlled with left ctrl + left alt + "comma" and "period" keys.
+
+
+#
 New **VoodooPS2Trackpad** uses VoodooInput's Magic Trackpad II emulation in order to use macOS native driver instead of handling all gestures itself. This enables the use of any from one to four finger gestures defined by Apple including:
 * Look up & data detectors
 * Secondary click (*with two fingers, in bottom left corner\*, in bottom right corner\**)
