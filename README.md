@@ -1,7 +1,7 @@
 VoodooPS2
 =========
 
-**NOTE:** This is a modified version of VoodooPS2Controller that maps the top row key of a Chromebook to the following:
+**NOTE:** This is a modified version of VoodooPS2Controller for Chromebooks running MacOS. It enabled keyboard backlight control and maps the top row keys to the following:
 
 
 | On Keyboard          | Mapped to      |
@@ -21,6 +21,8 @@ VoodooPS2
 - F5 Can be mapped to  in System Preferences > Keyboard > Shortcuts > App Shortcuts
 
 Keyboard backlight brightness control is controlled with left ctrl + left alt + "comma" and "period" keys.
+
+SSDT-KBBL.ssdt is required for keyboard backlight brightness control. 
 
 
 #
