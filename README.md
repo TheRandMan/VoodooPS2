@@ -22,7 +22,7 @@ VoodooPS2-Chromebook
 
 Keyboard backlight brightness control is controlled with left ctrl + left alt + "comma" and "period" keys.
 
-SSDT-KBBL.ssdt is required for keyboard backlight brightness control. 
+SSDT-KBBL.aml is required for keyboard backlight brightness control. 
 
 
 #
