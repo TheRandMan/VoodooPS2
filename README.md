@@ -1,5 +1,5 @@
-VoodooPS2
-=========
+VoodooPS2-Chromebook
+====================
 
 **NOTE:** This is a modified version of VoodooPS2Controller for Chromebooks running MacOS. It enabled keyboard backlight control and maps the top row keys to the following:
 
