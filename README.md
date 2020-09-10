@@ -1,7 +1,7 @@
 VoodooPS2-Chromebook
 ====================
 
-**NOTE:** This is a modified version of VoodooPS2Controller for Chromebooks running MacOS. It enables keyboard backlight control and maps the top row keys to the following:
+This is a modified version of [VoodooPS2](https://github.com/acidanthera/VoodooPS2) for Chromebooks running MacOS. It enables keyboard backlight control and maps the top row keys to the following:
 
 
 | On Keyboard          | Mapped to      |
@@ -26,9 +26,10 @@ SSDT-KBBL.aml is required for keyboard backlight brightness control.
 
 
 #
-The mouse and trackpad features have been removed from this build as PS2 mouse and trackpads aren't present on Chromebooks.
+The mouse and trackpad kexts have been removed from the build as they are not found in Chromebooks.
 
 ## Credits:
+* [VoodooPS2](https://github.com/acidanthera/VoodooPS2)
 * VoodooPS2Controller etc. – turbo, mackerintel, @RehabMan, nhand42, phb, Chunnan, jape, bumby (see RehabMan's repository).
 * Magic Trackpad 2 reverse engineering and implementation – https://github.com/alexandred/VoodooI2C project team.
 * VoodooPS2Trackpad integration – @kprinssu.
